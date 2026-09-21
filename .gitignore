@@ -1,0 +1,17 @@
+# Local provider plugins and generated zips — never committed.
+.terraform/
+.build/
+*.zip
+
+# State. Local today; see backend.tf for moving it to S3.
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Committed on purpose:
+#   .terraform.lock.hcl  pins the exact provider build (see versions.tf)
+#   envs/*.tfvars        non-secret per-environment inputs
+*.tfvars
+!envs/*.tfvars
+
+__pycache__/
